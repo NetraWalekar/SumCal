@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+   .heading{
+    text-align: center;
+    font-family: monotype corsiva;
+    font-size: 40px;
+   }
+   .input{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+   }
+   .input-no{
+    width: 300px;
+    margin: 10px;
+    height: 30px;
+    border-radius: 25px;
+   }
+   .button-cal{
+    width: 200px;
+    margin-top: 40px;
+    height: 40px;
+    border-radius: 15px;
+   }
+   </style>
+</head>
+<body background="maths.jpg">
+    <hr>
+    <h1 class="heading">Sum Calculator</h1>
+    <hr>
+    <div class="input">
+    <input type="text" id="num1" class="input-no" style="margin-top: 50px;">
+    <input type="text" id="num2" class="input-no">
+    <h2 id="res">sum : 0</h2>
+    <button class="button-cal" onclick="Calculate()">Calculate</button>
+    <button class="button-cal" onclick="Reset()">Reset</button>
+</div>
+</body>
+<script>
+    function Calculate(){
+        const number1 = document.getElementById("num1")
+        const number2 = document.getElementById("num2")
+
+        const result = parseInt(number1.value) + parseInt(number2.value) 
+        let display = document.getElementById("res")
+        display.innerText = `Sum : ${result}`
+        }
+        function Reset(){
+        const numbe1 = document.getElementById("num1")
+        const numbe2 = document.getElementById("num2")
+        location.reload();
+        }
+</script>
+</html>
